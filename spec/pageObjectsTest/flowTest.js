@@ -11,4 +11,9 @@ describe('Protractor Demo App', function () {
         homePage.contactUsLink.click();
         expect(contactUsPage.customerServiceLabel.getText()).toEqual('CUSTOMER SERVICE - CONTACT US');
     });
+    it('check visibility of dropdown list', function () {
+        browser.waitForAngularEnabled(false);
+        browser.get(contactUsPage.URL);
+        expect(contactUsPage.dropdownList.isEnabled()).toBe(true); 
+    });     
 });
