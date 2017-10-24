@@ -15,5 +15,10 @@ describe('Protractor Demo App', function () {
         browser.waitForAngularEnabled(false);
         browser.get(contactUsPage.URL);
         expect(contactUsPage.dropdownList.isEnabled()).toBe(true); 
-    });     
+    });    
+    it('check visibility of send button', function () {
+        browser.waitForAngularEnabled(false);
+        browser.get(contactUsPage.URL);
+        expect(contactUsPage.sendButton.isEnabled()).toBe(true); 
+    });    
 });
