@@ -13,7 +13,7 @@ exports.config = {
     // They may include glob patterns.
  suites:{
     Jasmine:'spec/jasmine/*.js',
-    pageObject: 'spec/pageObjectsTest/*.js'  
+    pageObject: 'spec/pageObjectsTest/Zadanie1Test.js'  
  },
     // Options to be passed to Jasmine-node.
     jasmineNodeOpts: 
@@ -24,6 +24,6 @@ exports.config = {
         global.pageObjectDir = __dirname+"/pageObject";
         global.using=using;
         
-        global.ignoreSynchronization = true;
+        browser.ignoreSynchronization = true;//non-angular
     },
     };
