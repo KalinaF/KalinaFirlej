@@ -14,11 +14,11 @@ describe('Protractor Demo App', function () {
     it('check visibility of dropdown list', function () {
         browser.waitForAngularEnabled(false);
         browser.get(contactUsPage.URL);
-        expect(contactUsPage.dropdownList.isEnabled()).toBe(true); 
+        expect(contactUsPage.dropdownList.isDisplayed()).toBe(true); 
     });    
     it('check visibility of send button', function () {
         browser.waitForAngularEnabled(false);
         browser.get(contactUsPage.URL);
-        expect(contactUsPage.sendButton.isEnabled()).toBe(true); 
+        expect(contactUsPage.sendButton.isDisplayed()).toBe(true); 
     });    
 });
