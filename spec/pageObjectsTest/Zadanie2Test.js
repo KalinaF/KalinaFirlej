@@ -13,15 +13,16 @@ using(data, function (dress) {
     describe('Protractor Demo App', function () {
         it('go to every Dress Page and check the page title', function () {
             dressesPage[dress.selector].click();
-            expect(singleDressPage.selectorHeader.getAttribute("h1")).toEqual(dress.title)
+            var header = singleDressPage.getHeader().getAttribute("h1");
+            expect(header).toEqual(dress.title)
         });
-        it('validate if every dress label is correct ', function () {
-            dressesPage[dress.selector].click();
-            expect(singleDressPage.selectorReference.getText()).toEqual(dress.reference);
-        });
-        it('validate if every dress value is correct ', function () {
-            dressesPage[dress.selector].click();
-            expect(singleDressPage.selectorValue.getText()).toEqual(dress.value);
-        });
-    });
+    //     it('validate if every dress label is correct ', function () {
+    //         dressesPage[dress.selector].click();
+    //         expect(singleDressPage.selectorReference.getText()).toEqual(dress.reference);
+    //     });
+    //     it('validate if every dress value is correct ', function () {
+    //         dressesPage[dress.selector].click();
+    //         expect(singleDressPage.selectorValue.getText()).toEqual(dress.value);
+    //     });
+     });
 });
